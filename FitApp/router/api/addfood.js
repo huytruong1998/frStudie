@@ -22,7 +22,7 @@ router.post("/add", (req, res) => {
 
   Food.findOne({ name: req.body.name }).then(food => {
     if (food) {
-      return res.status(400).json("Food already exist");
+      return res.status(400).json("Food already exists");
     } else {
       const newFood = new Food({
         name: req.body.name,
