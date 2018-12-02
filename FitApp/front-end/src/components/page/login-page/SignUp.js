@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import Backdrop from "./Backdrop";
-import LoginForm from "./LoginForm";
 
+import SignUpForm from "./SignUpForm";
 import "../../../style/style.css";
 
-class Login extends Component {
+class SignUp extends Component {
   render() {
     return (
       <div>
@@ -14,7 +14,7 @@ class Login extends Component {
               <Backdrop />
             </div>
             <div className="col-md-6">
-              <LoginForm />
+              <SignUpForm />
             </div>
           </div>
         </div>
@@ -23,4 +23,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default SignUp;
