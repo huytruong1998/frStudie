@@ -14,7 +14,7 @@ class SignUp extends Component {
               <Backdrop />
             </div>
             <div className="col-md-6">
-              <SignUpForm />
+              <SignUpForm history={this.props.history} />
             </div>
           </div>
         </div>
