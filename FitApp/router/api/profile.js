@@ -13,7 +13,7 @@ const validateProfileInput = require("../../validation/profile");
 
 router.get("/test", (req, res) => res.json({ msg: "Profile work" }));
 
-// @route GET api/profile/test
+// @route GET api/profile
 // @desc Get current user profile
 // @access Private
 

@@ -8,6 +8,7 @@ const users = require("./router/api/users");
 const profile = require("./router/api/profile");
 
 const addfood = require("./router/api/addfood");
+const goal = require("./router/api/goal");
 
 const app = express();
 
@@ -39,6 +40,7 @@ require("./config/passport")(passport);
 app.use("/api/users", users);
 app.use("/api/profile", profile);
 
+app.use("/api/goal", goal);
 app.use("/api/addfood", addfood);
 
 const port = process.env.PORT || 5000;
