@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser } from "./actions/authActions";
@@ -8,6 +8,7 @@ import { clearCurrentProgress } from "./actions/progressActions";
 
 import { Provider } from "react-redux";
 import store from "./store";
+import PrivateRoute from "./components/private/PrivateRoute";
 
 import Login from "./components/page/login-page/Login";
 import SignUp from "./components/page/login-page/SignUp";
@@ -53,12 +54,17 @@ class App extends Component {
                 <Route path="/layout" component={Layout} />
               </div>
               <div className="col-lg-9 content-wrapper">
-                <Route path="/layout/consume" component={Consumed} />
-                <Route path="/layout/editgoal" component={EditGoal} />
-                <Route path="/layout/setting" component={Settings} />
-                <Route path="/layout/burnt" component={Burnt} />
-                <Route path="/layout/tracking" component={TrackingChoose} />
-                <Route path="/layout/progress" component={Progress} />
+                <Switch>
+                  <PrivateRoute path="/layout/progress" component={Progress} />
+                  <PrivateRoute path="/layout/consume" component={Consumed} />
+                  <PrivateRoute path="/layout/editgoal" component={EditGoal} />
+                  <PrivateRoute path="/layout/setting" component={Settings} />
+                  <PrivateRoute path="/layout/burnt" component={Burnt} />
+                  <PrivateRoute
+                    path="/layout/tracking"
+                    component={TrackingChoose}
+                  />
+                </Switch>
               </div>
             </div>
           </div>
