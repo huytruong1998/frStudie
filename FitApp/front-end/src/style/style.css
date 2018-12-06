@@ -68,6 +68,8 @@
     padding: 18px;
     width: 100%;
     margin-bottom: 3%;
+
+    outline: none;
 }
 
 .authenticate-input input:focus{
@@ -77,7 +79,6 @@
 .authenticate-input input::placeholder{
     color: #C1C6CE;
 }
-
 
 
 /*style for sign in and sign up btn*/
@@ -353,6 +354,21 @@
     margin-top: 7vh;
 }
 
+.no-data-line{          /*style for no-progress-data screen*/
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+
+    margin-top: 16vh;
+}
+.no-data-line p{
+    font-family: "Open Sans";
+    font-size: 32px;
+    font-weight: 300;
+    color: #FE5196;
+    margin-bottom: 0;
+    margin-right: 15px;
+}
 
 .progress-line{         /*display row for each line of goal-consumed-burnt*/
     display: flex;
@@ -429,6 +445,7 @@
     font-size: 18px;
     padding: 18px;
     width: 100%;
+
 }
 .food-search input::placeholder{
     color: #C1C6CE;
