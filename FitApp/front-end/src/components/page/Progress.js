@@ -37,7 +37,7 @@ class Progress extends Component {
                 <div className="bar-max">
                   <div className="bar-pink" />
                 </div>
-                <p className="kcal-pink">1500 kcal</p>
+                <p className="kcal-pink">{progress.consumedgoal} kcal</p>
               </div>
               <div className="progress-line">
                 <p className="orange">consume</p>
@@ -54,7 +54,7 @@ class Progress extends Component {
                 <div className="bar-max">
                   <div className="bar-pink" />
                 </div>
-                <p className="kcal-pink">700 kcal</p>
+                <p className="kcal-pink">{progress.burntgoal} kcal</p>
               </div>
               <div className="progress-line burnt-line">
                 <p className="orange">burnt</p>

@@ -18,13 +18,13 @@ router.post(
   "/",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
-    const { errors, isValid } = validateGoal(req.body);
-    // Check validation
+    // const { errors, isValid } = validateGoal(req.body);
+    // // Check validation
 
-    if (!isValid) {
-      //return any errors with 400 status
-      return res.status(400).json(errors);
-    }
+    // if (!isValid) {
+    //   //return any errors with 400 status
+    //   return res.status(400).json(errors);
+    // }
     const goalFields = {};
     goalFields.user = req.user.id;
     if (req.body.consumed) goalFields.consumed = req.body.consumed;
