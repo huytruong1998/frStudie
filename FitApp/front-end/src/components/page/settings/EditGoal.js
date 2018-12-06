@@ -8,9 +8,7 @@ class Progress extends Component {
     return (
       <div>
         <div className="mini-nav">
-          <Link to="/layout/setting">
-            <img alt="back" src={backbtn} className="back-btn" />
-          </Link>
+          <img alt="back" src={backbtn} className="back-btn" />
           <div className="title">edit goal</div>
         </div>
         <div>
@@ -21,7 +19,9 @@ class Progress extends Component {
                 <div className="minus" />
               </div>
               <div className="slider-num">
-                <p>1500</p>
+                <form>
+                  <input type="number" />
+                </form>
               </div>
               <div className="slider-btn plus-btn">
                 <p>+</p>
@@ -35,7 +35,9 @@ class Progress extends Component {
                 <div className="minus" />
               </div>
               <div className="slider-num">
-                <p>700</p>
+                <form>
+                  <input type="number" />
+                </form>
               </div>
               <div className="slider-btn plus-btn">
                 <p>+</p>
@@ -43,7 +45,7 @@ class Progress extends Component {
             </div>
           </div>
           <div className="slider-line">
-            <button className="save-btn">save</button>
+            <button className="save-btn save-goal">save</button>
           </div>
         </div>
       </div>
