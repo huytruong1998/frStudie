@@ -63,6 +63,8 @@
   padding: 18px;
   width: 100%;
   margin-bottom: 3%;
+
+  outline: none;
 }
 
 .authenticate-input input:focus {
@@ -338,6 +340,23 @@
 .progress-spacing {
   /*spacing between parts in progress screen*/
   margin-top: 7vh;
+}
+
+.no-data-line {
+  /*style for no-progress-data screen*/
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+
+  margin-top: 16vh;
+}
+.no-data-line p {
+  font-family: "Open Sans";
+  font-size: 32px;
+  font-weight: 300;
+  color: #fe5196;
+  margin-bottom: 0;
+  margin-right: 15px;
 }
 
 .progress-line {

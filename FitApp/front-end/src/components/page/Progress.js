@@ -70,11 +70,15 @@ class Progress extends Component {
         // User is logged in but has no profile
         progressContent = (
           <div>
-            <p className="lead text-muted">Welcome {user.name}</p>
-            <p>You have not yet setup a profile, please add some info</p>
-            <Link to="layout/create-progress" className="btn btn-lg btn-info">
-              Create Profile
-            </Link>
+            <div className="progress-date">
+              <p>thursday 11.09.18</p>
+            </div>
+            <div className="no-data-line">
+              <p>Goal has not been set</p>
+              <Link className="btn btn-lg btn-info" to="layout/create-progress">
+                set goal
+              </Link>
+            </div>
           </div>
         );
       }
