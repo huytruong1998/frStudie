@@ -1,26 +1,38 @@
 import React, { Component } from 'react';
 import '../style/style.css';
 import logo from '../png-elements/logo.png';
-import white from '../png-elements/nav-toggle-white.png';
-import color from '../png-elements/nav-toggle-color.png';
+import white from '../png-elements/logo-white.png';
+
 
 class NavBar extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isDisplay:  false
+        }
+    }
+
     dropNavBar = () => {
-        document.getElementById("nav-content").classList.toggle("show-nav");
+        this.setState({
+            isDisplay: !this.state.isDisplay
+        });
     };
 
     render() {
         return (
             <div className="col-lg-3 navbar-wrapper">
-                <img
-                    alt="toggle"
-                    src={color}
-                    className="toggle-btn"
-                    onClick={this.dropNavBar}
-                >
-                </img>
-                <ul className="nav flex-column" id="nav-content">
-                    <img alt="logo" src={logo} className="navbar-logo"/>
+                <div className="toggle-btn" onClick={this.dropNavBar}>
+                    <div className="toggle-style">
+                        <div className={ this.state.isDisplay ? "toggle-line change-white" : "toggle-line"}></div>
+                        <div className={ this.state.isDisplay ? "toggle-line change-white" : "toggle-line"}></div>
+                        <div className={ this.state.isDisplay ? "toggle-line change-white" : "toggle-line"}></div>
+                    </div>
+                </div>
+                <ul id="nav-content" className={ this.state.isDisplay === true ? "show-nav nav flex-column" : "nav flex-column"}>
+                    <img id="color-logo" alt="logo" src={logo} className="navbar-logo"/>
+                    <div id="white-logo">
+                        <img alt="logo" src={white} className="navbar-logo"/>
+                    </div>
                     <div className="nav-cate">
                         <li className="nav-item">
                             <div className="navbar-bullet"></div>

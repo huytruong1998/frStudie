@@ -18,7 +18,7 @@ class Burnt extends Component {
                 </div>
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-sm-6 sport">
+                        <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 sport">
                             <img alt="thumb" src={thumb}></img>
                             <div className="sport-desc">
                                 <p className="sport-name">running</p>
@@ -33,7 +33,7 @@ class Burnt extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-sm-6 sport">
+                        <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 sport">
                             <img alt="thumb" src={thumb}></img>
                             <div className="sport-desc">
                                 <p className="sport-name">running</p>
@@ -48,7 +48,7 @@ class Burnt extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-sm-6 sport">
+                        <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 sport">
                             <img alt="thumb" src={thumb}></img>
                             <div className="sport-desc">
                                 <p className="sport-name">running</p>
@@ -63,7 +63,7 @@ class Burnt extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-sm-6 sport">
+                        <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 sport">
                             <img alt="thumb" src={thumb}></img>
                             <div className="sport-desc">
                                 <p className="sport-name">running</p>
@@ -78,6 +78,7 @@ class Burnt extends Component {
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>

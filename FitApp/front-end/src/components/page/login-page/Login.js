@@ -14,7 +14,7 @@ class Login extends Component {
                             <Backdrop />
                         </div>
                         <div className="col-md-6">
-                            <SignUpForm/>
+                            <LoginForm/>
                         </div>
                     </div>
                 </div>

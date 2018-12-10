@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 import Progress from './page/Progress'
 import NoProgressData from './page/NoProgressData'
 
-import Schedule from './page/Schedule'
+import Guidance from './page/Guidance'
+
+import Schedule from './page/schedule/Schedule'
 
 import Settings from './page/settings/Settings';
 import EditGoal from './page/settings/EditGoal';
@@ -19,7 +21,7 @@ class Selector extends Component {
     render() {
         return (
             <div className="col-lg-9 content-wrapper">
-                <NoProgressData/>
+                <Guidance/>
             </div>
         );
     }
