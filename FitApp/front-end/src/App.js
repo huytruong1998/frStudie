@@ -22,7 +22,7 @@ import TrackingChoose from "./components/page/tracking/TrackingChoose";
 import Layout from "./components/page/Layout";
 import Progress from "./components/page/Progress";
 import Guidance from "./components/page/Guidance";
-import Schedule from "./components/page/Schedule";
+import Schedule from "./components/page/schedule/Schedule";
 
 //Check for token
 if (localStorage.jwtToken) {
