@@ -30,7 +30,9 @@ class Setting extends Component {
             </Link>
           </div>
           <div>
-            <button className="main-btn">edit profile</button>
+            <Link to="/layout/editprofile" className="main-btn">
+              edit profile
+            </Link>
           </div>
           <div>
             {/* <button >Logout</button> */}

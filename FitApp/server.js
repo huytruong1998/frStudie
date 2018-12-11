@@ -6,7 +6,7 @@ const passport = require("passport");
 
 const users = require("./router/api/users");
 const profile = require("./router/api/profile");
-
+const guide = require("./router/api/addguide");
 const addfood = require("./router/api/addfood");
 const goal = require("./router/api/goal");
 
@@ -39,7 +39,7 @@ require("./config/passport")(passport);
 //routes
 app.use("/api/users", users);
 app.use("/api/profile", profile);
-
+app.use("/api/guide", guide);
 app.use("/api/goal", goal);
 app.use("/api/addfood", addfood);
 

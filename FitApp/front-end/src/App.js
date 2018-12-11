@@ -13,6 +13,7 @@ import PrivateRoute from "./components/private/PrivateRoute";
 import Login from "./components/page/login-page/Login";
 import SignUp from "./components/page/login-page/SignUp";
 import EditGoal from "./components/page/settings/EditGoal";
+import EditProfile from "./components/page/settings/EditProfile";
 import Settings from "./components/page/settings/Settings";
 
 import Burnt from "./components/page/tracking/Burnt";
@@ -20,6 +21,7 @@ import Consumed from "./components/page/tracking/Consumed";
 import TrackingChoose from "./components/page/tracking/TrackingChoose";
 import Layout from "./components/page/Layout";
 import Progress from "./components/page/Progress";
+import Guidance from "./components/page/Guidance";
 import Schedule from "./components/page/Schedule";
 
 //Check for token
@@ -57,8 +59,13 @@ class App extends Component {
               <div className="col-lg-9 content-wrapper">
                 <Switch>
                   <PrivateRoute path="/layout/progress" component={Progress} />
+                  <PrivateRoute path="/layout/guidance" component={Guidance} />
                   <PrivateRoute path="/layout/consume" component={Consumed} />
                   <PrivateRoute path="/layout/editgoal" component={EditGoal} />
+                  <PrivateRoute
+                    path="/layout/editprofile"
+                    component={EditProfile}
+                  />
                   <PrivateRoute path="/layout/setting" component={Settings} />
                   <PrivateRoute path="/layout/burnt" component={Burnt} />
                   <PrivateRoute path="/layout/schedule" component={Schedule} />
