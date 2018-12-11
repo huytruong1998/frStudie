@@ -35,22 +35,7 @@ class Guidance extends Component {
     }
     return (
       <div className="container-fluid">
-        <div className="row">
-          {guideContent}
-
-          <div className="col-sm-12 col-md-12 col-lg-12 col-xl-12 sport-guide">
-            <img alt="thumb" src={thumb} />
-            <div className="sport-guide-content">
-              <p className="sport-name">running</p>
-              <div className="mins">
-                <p className="min-text">
-                  A moderate 5-mph run will burn about 755 calories per hour in
-                  a 200-pound person.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div className="row">{guideContent}</div>
       </div>
     );
   }
