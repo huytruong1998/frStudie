@@ -15,7 +15,6 @@ class Progress extends Component {
     this.props.getCurrentProgress();
   }
   render() {
-    const { user } = this.props.auth;
     const { progress, loading } = this.props.progress;
 
     let progressContent;
@@ -42,9 +41,17 @@ class Progress extends Component {
               <div className="progress-line">
                 <p className="orange">consume</p>
                 <div className="bar-max">
-                  <div className="bar-orange" />
+                  <div
+                    className="bar-orange"
+                    style={{
+                      width:
+                        (progress.consumed / progress.consumedgoal) * 100 + "%"
+                    }}
+                  />
                 </div>
-                <p className="kcal-orange">1200 kcal</p>
+                <p className="kcal-orange">
+                  {progress.consumed ? progress.consumed : 0} kcal
+                </p>
               </div>
             </div>
             <div className="progress-spacing">
@@ -59,9 +66,16 @@ class Progress extends Component {
               <div className="progress-line burnt-line">
                 <p className="orange">burnt</p>
                 <div className="bar-max">
-                  <div className="bar-orange" />
+                  <div
+                    className="bar-orange"
+                    style={{
+                      width: (progress.burnt / progress.burntgoal) * 100 + "%"
+                    }}
+                  />
                 </div>
-                <p className="kcal-orange">500 kcal</p>
+                <p className="kcal-orange">
+                  {progress.burnt ? progress.burnt : 0} kcal
+                </p>
               </div>
             </div>
           </div>
@@ -75,7 +89,7 @@ class Progress extends Component {
             </div>
             <div className="no-data-line">
               <p>Goal has not been set</p>
-              <Link className="btn btn-lg btn-info" to="layout/create-progress">
+              <Link className="main-btn" to="/layout/editgoal">
                 set goal
               </Link>
             </div>
@@ -89,13 +103,12 @@ class Progress extends Component {
 
 Progress.propTypes = {
   getCurrentProgress: PropTypes.func.isRequired,
-  auth: PropTypes.object.isRequired,
+
   progress: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
-  progress: state.progress,
-  auth: state.auth
+  progress: state.progress
 });
 
 export default connect(

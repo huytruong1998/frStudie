@@ -7,8 +7,8 @@ const Food = require("../../models/Food");
 
 //load validation
 const validateFoodInput = require("../../validation/food");
-router.get("/test", (req, res) => res.json({ msg: "Profile work" }));
-// @route GET api/addfood
+router.get("/test", (req, res) => res.json({ msg: "Food work" }));
+// @route POST api/addfood
 // @desc Add food to database
 // @access Public
 
@@ -37,5 +37,21 @@ router.post("/add", (req, res) => {
       newFood.save().then(newFood => res.json(newFood));
     }
   });
+});
+
+// @route GET api/addfood
+// @desc Add food to database
+// @access Public
+router.get("/", (req, res) => {
+  const errors = {};
+  Food.find()
+    .then(food => {
+      if (!food) {
+        errors.nofood = "There is no food in the database";
+        return res.status(404).json(errors);
+      }
+      res.json(food);
+    })
+    .catch(err => res.status(404).json({ food: "There are no food" }));
 });
 module.exports = router;

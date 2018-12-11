@@ -419,7 +419,7 @@
 .bar-orange {
   /*percentage that bar chart will rise*/
   background-color: #f77062;
-  width: 65%;
+  width: 0%;
   height: 100%;
 }
 

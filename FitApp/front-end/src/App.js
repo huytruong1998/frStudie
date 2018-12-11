@@ -20,6 +20,7 @@ import Consumed from "./components/page/tracking/Consumed";
 import TrackingChoose from "./components/page/tracking/TrackingChoose";
 import Layout from "./components/page/Layout";
 import Progress from "./components/page/Progress";
+import Schedule from "./components/page/Schedule";
 
 //Check for token
 if (localStorage.jwtToken) {
@@ -60,6 +61,7 @@ class App extends Component {
                   <PrivateRoute path="/layout/editgoal" component={EditGoal} />
                   <PrivateRoute path="/layout/setting" component={Settings} />
                   <PrivateRoute path="/layout/burnt" component={Burnt} />
+                  <PrivateRoute path="/layout/schedule" component={Schedule} />
                   <PrivateRoute
                     path="/layout/tracking"
                     component={TrackingChoose}

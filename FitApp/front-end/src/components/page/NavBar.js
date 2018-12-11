@@ -30,9 +30,9 @@ class NavBar extends Component {
             </li>
             <li className="nav-item">
               <div className="navbar-bullet" />
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="/layout/schedule">
                 schedule
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <div className="navbar-bullet" />

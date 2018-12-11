@@ -11,9 +11,8 @@ class Progress extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      consumed: 0,
       consumedgoal: 0,
-      burnt: 0,
+
       burntgoal: 0
     };
     this.onChange = this.onChange.bind(this);
@@ -52,7 +51,7 @@ class Progress extends Component {
     return (
       <div>
         <div className="mini-nav">
-          <Link to="/layout/setting">
+          <Link to="/layout/progress">
             <img alt="back" src={backbtn} className="back-btn" />
           </Link>
 
