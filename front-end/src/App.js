@@ -46,7 +46,7 @@ if (localStorage.jwtToken) {
     //TODO: Clear current progress
     store.dispatch(clearCurrentProgress());
     //Redirect to login
-    window.location.href = "/login";
+    window.location.href = "/";
   }
 }
 
@@ -56,8 +56,7 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div>
-            <Route exact path="/" render={() => <Redirect to="/layout" />} />
-            <Route exact path="/login" component={Login} />
+            <Route exact path="/" component={Login} />
             <Route exact path="/signup" component={SignUp} />
             <div className="row">
               <div className="col-lg-3 navbar-wrapper">
