@@ -64,6 +64,7 @@ class App extends Component {
               </div>
               <div className="col-lg-9 content-wrapper">
                 <Switch>
+                  <PrivateRoute path="/" component={Login} />
                   <PrivateRoute path="/layout/progress" component={Progress} />
                   <PrivateRoute path="/layout/guidance" component={Guidance} />
                   <PrivateRoute path="/layout/consume" component={Consumed} />
