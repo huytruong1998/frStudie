@@ -12,11 +12,11 @@ class Setting extends Component {
     e.preventDefault();
     this.props.clearCurrentProgress();
     this.props.logoutUser();
-    this.props.history.push("/");
+    this.props.history.push("/login");
   }
   componentDidMount() {
     if (!this.props.auth.isAuthenticated) {
-      this.props.history.push("/");
+      this.props.history.push("/login");
     }
   }
 

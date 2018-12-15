@@ -9,11 +9,11 @@ class Layout extends Component {
   onLogoutClick(e) {
     e.preventDefault();
     this.props.logoutUser();
-    this.props.history.push("/");
+    this.props.history.push("/login");
   }
   componentDidMount() {
     if (!this.props.auth.isAuthenticated) {
-      this.props.history.push("/");
+      this.props.history.push("/login");
     }
   }
   render() {
