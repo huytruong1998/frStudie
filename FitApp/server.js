@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const gravatar = require("gravatar");
 const passport = require("passport");
+const path = require("path");
 
 const users = require("./router/api/users");
 const profile = require("./router/api/profile");
@@ -42,6 +43,16 @@ app.use("/api/profile", profile);
 app.use("/api/guide", guide);
 app.use("/api/goal", goal);
 app.use("/api/addfood", addfood);
+
+//Server static if in production
+if (process.env.NODE_ENV === "production") {
+  // Set status folder
+  app.use(express.static("client/build"));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+}
 
 const port = process.env.PORT || 5000;
 

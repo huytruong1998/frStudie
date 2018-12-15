@@ -1,9 +1,15 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect
+} from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser } from "./actions/authActions";
 import { logoutUser } from "./actions/authActions";
+import { connect } from "react-redux";
 import { clearCurrentProgress } from "./actions/progressActions";
 
 import { Provider } from "react-redux";
@@ -50,6 +56,7 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div>
+            <Route exact path="/" render={() => <Redirect to="/layout" />} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={SignUp} />
             <div className="row">
