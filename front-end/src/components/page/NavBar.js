@@ -22,36 +22,40 @@ class NavBar extends Component {
         <ul className="nav flex-column" id="nav-content">
           <img alt="logo" src={logo} className="navbar-logo" />
           <div className="nav-cate">
-            <li className="nav-item">
-              <div className="navbar-bullet" />
-              <Link className="nav-link" to="/layout/progress">
-                progress
-              </Link>
-            </li>
-            <li className="nav-item">
-              <div className="navbar-bullet" />
-              <Link className="nav-link" to="/layout/schedule">
-                schedule
-              </Link>
-            </li>
-            <li className="nav-item">
-              <div className="navbar-bullet" />
-              <Link className="nav-link" to="/layout/tracking">
-                tracking
-              </Link>
-            </li>
-            <li className="nav-item">
-              <div className="navbar-bullet" />
-              <Link className="nav-link" to="/layout/guidance">
-                guidance
-              </Link>
-            </li>
-            <li className="nav-item">
-              <div className="navbar-bullet" />
-              <Link className="nav-link" to="/layout/setting">
-                settings
-              </Link>
-            </li>
+            <Link to="/layout/progress">
+              <li className="nav-item">
+                <div className="navbar-bullet" />
+
+                <a className="nav-link">progress </a>
+              </li>
+            </Link>
+            <Link to="/layout/schedule">
+              <li className="nav-item">
+                <div className="navbar-bullet" />
+
+                <a className="nav-link">schedule</a>
+              </li>
+            </Link>
+            <Link to="/layout/tracking">
+              <li className="nav-item">
+                <div className="navbar-bullet" />
+
+                <a className="nav-link">tracking</a>
+              </li>
+            </Link>
+            <Link to="/layout/guidance">
+              <li className="nav-item">
+                <div className="navbar-bullet" />
+                <a className="nav-link">guidance</a>
+              </li>
+            </Link>
+            <Link to="/layout/setting">
+              <li className="nav-item">
+                <div className="navbar-bullet" />
+
+                <a className="nav-link">settings</a>
+              </li>
+            </Link>
           </div>
         </ul>
       </div>

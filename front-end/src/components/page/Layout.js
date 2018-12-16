@@ -18,7 +18,7 @@ class Layout extends Component {
   }
   render() {
     return (
-      <div>
+      <div style={{ width: "100%" }}>
         {/* <button onClick={this.onLogoutClick.bind(this)}>Logout</button> */}
 
         <NavBar />

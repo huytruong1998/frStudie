@@ -58,6 +58,7 @@ class App extends Component {
           <div>
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={SignUp} />
+
             <div className="row">
               <div className="col-lg-3 navbar-wrapper">
                 <Route path="/layout" component={Layout} />

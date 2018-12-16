@@ -49,6 +49,9 @@ class Login extends Component {
       email: this.state.email,
       password: this.state.password
     };
+    if (this.state.errors !== null) {
+      alert("Hello");
+    }
 
     this.props.loginUser(userData);
   }
@@ -69,7 +72,7 @@ class Login extends Component {
                     <input
                       type="email"
                       name="email"
-                      className={classnames("form-control form-control-lg", {
+                      className={classnames("", {
                         "is-invalid": errors.email
                       })}
                       placeholder="EMAIL"
@@ -84,7 +87,7 @@ class Login extends Component {
                     <input
                       type="password"
                       name="password"
-                      className={classnames("form-control form-control-lg", {
+                      className={classnames("", {
                         "is-invalid": errors.password
                       })}
                       placeholder="PASSWORD"

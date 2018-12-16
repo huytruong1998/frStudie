@@ -236,6 +236,10 @@
   color: white !important;
 }
 
+.nav-cate a:hover {
+  text-decoration: none;
+}
+
 .toggle-btn {
   display: none;
 }
