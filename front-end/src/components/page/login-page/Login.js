@@ -49,9 +49,6 @@ class Login extends Component {
       email: this.state.email,
       password: this.state.password
     };
-    if (this.state.errors !== null) {
-      alert("Hello");
-    }
 
     this.props.loginUser(userData);
   }
