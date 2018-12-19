@@ -48,88 +48,82 @@ class SignUp extends Component {
     const { errors } = this.state;
     return (
       <div>
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-md-6 backdrop-padding">
-              <Backdrop />
-            </div>
-            <div className="col-md-6">
-              <div className="authenticate-form-align">
-                <img alt="logo" src={logo} className="authenticate-logo" />
-                <form className="authenticate-input" onSubmit={this.onSubmit}>
-                  <div className="form-group">
-                    <input
-                      type="name"
-                      name="name"
-                      className={classnames("form-control form-control-lg", {
-                        "is-invalid": errors.name
-                      })}
-                      placeholder="NAME"
-                      value={this.state.name}
-                      onChange={this.onChange}
-                    />
-                    {errors.email && (
-                      <div className="invalid-feedback">{errors.name}</div>
-                    )}
-                  </div>
-                  <div className="form-group">
-                    <input
-                      type="email"
-                      name="email"
-                      className={classnames("form-control form-control-lg", {
-                        "is-invalid": errors.email
-                      })}
-                      placeholder="EMAIL"
-                      value={this.state.email}
-                      onChange={this.onChange}
-                    />
-                    {errors.email && (
-                      <div className="invalid-feedback">{errors.email}</div>
-                    )}
-                  </div>
+        <div className="container-fluid row">
+          <div className="col-md-6 backdrop-padding">
+            <Backdrop />
+          </div>
+          <div className="col-md-6">
+            <div className="authenticate-form-align">
+              <img alt="logo" src={logo} className="authenticate-logo" />
+              <form className="authenticate-input" onSubmit={this.onSubmit}>
+                <div className="form-group">
+                  <input
+                    type="name"
+                    name="name"
+                    className={classnames("form-control form-control-lg", {
+                      "is-invalid": errors.name
+                    })}
+                    placeholder="NAME"
+                    value={this.state.name}
+                    onChange={this.onChange}
+                  />
+                  {errors.email && (
+                    <div className="invalid-feedback">{errors.name}</div>
+                  )}
+                </div>
+                <div className="form-group">
+                  <input
+                    type="email"
+                    name="email"
+                    className={classnames("form-control form-control-lg", {
+                      "is-invalid": errors.email
+                    })}
+                    placeholder="EMAIL"
+                    value={this.state.email}
+                    onChange={this.onChange}
+                  />
+                  {errors.email && (
+                    <div className="invalid-feedback">{errors.email}</div>
+                  )}
+                </div>
 
-                  <div className="form-group">
-                    <input
-                      type="password"
-                      name="password"
-                      className={classnames("form-control form-control-lg", {
-                        "is-invalid": errors.password
-                      })}
-                      placeholder="PASSWORD"
-                      value={this.state.password}
-                      onChange={this.onChange}
-                    />
+                <div className="form-group">
+                  <input
+                    type="password"
+                    name="password"
+                    className={classnames("form-control form-control-lg", {
+                      "is-invalid": errors.password
+                    })}
+                    placeholder="PASSWORD"
+                    value={this.state.password}
+                    onChange={this.onChange}
+                  />
 
-                    {errors.password && (
-                      <div className="invalid-feedback">{errors.password}</div>
-                    )}
-                  </div>
+                  {errors.password && (
+                    <div className="invalid-feedback">{errors.password}</div>
+                  )}
+                </div>
 
-                  <div className="form-group">
-                    <input
-                      type="password"
-                      name="password2"
-                      className={classnames("form-control form-control-lg", {
-                        "is-invalid": errors.password2
-                      })}
-                      placeholder="CONFIRM PASSWORD"
-                      value={this.state.password2}
-                      onChange={this.onChange}
-                    />
-                    {errors.password2 && (
-                      <div className="invalid-feedback">{errors.password2}</div>
-                    )}
-                  </div>
+                <div className="form-group">
+                  <input
+                    type="password"
+                    name="password2"
+                    className={classnames("form-control form-control-lg", {
+                      "is-invalid": errors.password2
+                    })}
+                    placeholder="CONFIRM PASSWORD"
+                    value={this.state.password2}
+                    onChange={this.onChange}
+                  />
+                  {errors.password2 && (
+                    <div className="invalid-feedback">{errors.password2}</div>
+                  )}
+                </div>
 
-                  <button
-                    type="submit"
-                    className="authenticate-button"
-                    href="#"
-                  >
-                    sign up
-                  </button>
-                </form>
-              </div>
+                <button type="submit" className="authenticate-button" href="#">
+                  sign up
+                </button>
+              </form>
             </div>
           </div>
         </div>
