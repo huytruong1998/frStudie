@@ -32,6 +32,11 @@ class SignUp extends Component {
       this.props.history.push("/layout");
     }
   }
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.errors) {
+      this.setState({ errors: nextProps.errors });
+    }
+  }
 
   onSubmit(e) {
     e.preventDefault();
@@ -42,12 +47,12 @@ class SignUp extends Component {
       password: this.state.password,
       password2: this.state.password2
     };
-    console.log(newUser);
 
     this.props.registerUser(newUser, this.props.history);
   }
   render() {
     const { errors } = this.state;
+
     return (
       <div>
         <div className="container-fluid row">
@@ -62,7 +67,7 @@ class SignUp extends Component {
                   <input
                     type="name"
                     name="name"
-                    className={classnames("form-control form-control-lg", {
+                    className={classnames("form-control", {
                       "is-invalid": errors.name
                     })}
                     placeholder="NAME"
@@ -77,7 +82,7 @@ class SignUp extends Component {
                   <input
                     type="email"
                     name="email"
-                    className={classnames("form-control form-control-lg", {
+                    className={classnames("form-control", {
                       "is-invalid": errors.email
                     })}
                     placeholder="EMAIL"
@@ -93,7 +98,7 @@ class SignUp extends Component {
                   <input
                     type="password"
                     name="password"
-                    className={classnames("form-control form-control-lg", {
+                    className={classnames("form-control", {
                       "is-invalid": errors.password
                     })}
                     placeholder="PASSWORD"
@@ -110,7 +115,7 @@ class SignUp extends Component {
                   <input
                     type="password"
                     name="password2"
-                    className={classnames("form-control form-control-lg", {
+                    className={classnames("form-control", {
                       "is-invalid": errors.password2
                     })}
                     placeholder="CONFIRM PASSWORD"
