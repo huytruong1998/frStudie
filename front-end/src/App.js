@@ -70,7 +70,7 @@ class App extends Component {
         <Router>
           <div>
             <div className="row">
-              <Route exact path="/login" component={Login} />
+              <Route exact path="/" component={Login} />
               <Route exact path="/signup" component={SignUp} />
 
               <div className="col-lg-3 navbar-wrapper">
