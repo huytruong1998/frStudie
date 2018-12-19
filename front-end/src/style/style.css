@@ -16,6 +16,10 @@
 ------ AUTHENTICATION -------
 */
 
+.no-auth {
+  display: none;
+}
+
 /*backdrop*/
 .backdrop {
   background-image: url("../png-elements/drop.png");
@@ -51,6 +55,7 @@
   align-items: center;
   width: 55%;
 }
+
 .authenticate-input input {
   border: 2px solid #c1c6ce;
   border-radius: 4px;
@@ -60,7 +65,7 @@
   font-size: 18px;
   color: #fe5196;
 
-  padding: 18px;
+  padding: 28px;
   width: 100%;
   margin-bottom: 3%;
 

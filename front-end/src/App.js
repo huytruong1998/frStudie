@@ -51,15 +51,28 @@ if (localStorage.jwtToken) {
 }
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      authstate: false
+    };
+  }
+  componentDidMount() {
+    if (localStorage.jwtToken) {
+      this.setState({ authstate: true });
+    } else {
+      this.setState({ authstate: false });
+    }
+  }
   render() {
     return (
       <Provider store={store}>
         <Router>
           <div>
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/signup" component={SignUp} />
-
             <div className="row">
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/signup" component={SignUp} />
+
               <div className="col-lg-3 navbar-wrapper">
                 <Route path="/layout" component={Layout} />
               </div>
