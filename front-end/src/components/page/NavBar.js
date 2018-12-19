@@ -22,38 +22,38 @@ class NavBar extends Component {
         <ul className="nav flex-column" id="nav-content">
           <img alt="logo" src={logo} className="navbar-logo" />
           <div className="nav-cate">
-            <Link to="/layout/progress">
+            <Link to="/layout/progress" className="no-underline">
               <li className="nav-item">
                 <div className="navbar-bullet" />
 
-                <a className="nav-link">progress </a>
+                <p className="nav-link">progress </p>
               </li>
             </Link>
-            <Link to="/layout/schedule">
+            <Link to="/layout/schedule" className="no-underline">
               <li className="nav-item">
                 <div className="navbar-bullet" />
 
-                <a className="nav-link">schedule</a>
+                <p className="nav-link">schedule</p>
               </li>
             </Link>
-            <Link to="/layout/tracking">
+            <Link to="/layout/tracking" className="no-underline">
               <li className="nav-item">
                 <div className="navbar-bullet" />
 
-                <a className="nav-link">tracking</a>
+                <p className="nav-link">tracking</p>
               </li>
             </Link>
-            <Link to="/layout/guidance">
+            <Link to="/layout/guidance" className="no-underline">
               <li className="nav-item">
                 <div className="navbar-bullet" />
-                <a className="nav-link">guidance</a>
+                <p className="nav-link">guidance</p>
               </li>
             </Link>
-            <Link to="/layout/setting">
+            <Link to="/layout/setting" className="no-underline">
               <li className="nav-item">
                 <div className="navbar-bullet" />
 
-                <a className="nav-link">settings</a>
+                <p className="nav-link">settings</p>
               </li>
             </Link>
           </div>

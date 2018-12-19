@@ -11,8 +11,68 @@ import Spinner from "./Spinner";
 //   today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
 
 class Progress extends Component {
+  constructor() {
+    super();
+    this.state = {
+      day: "",
+      date: "",
+      month: "",
+      year: ""
+    };
+  }
   componentDidMount() {
     this.props.getCurrentProgress();
+    var day = new Date().getDay();
+    var date = new Date().getDate();
+
+    var month = new Date().getMonth() + 1;
+    var year = new Date().getFullYear();
+    this.setState({
+      date: date
+    });
+    this.setState({
+      month: month
+    });
+    this.setState({
+      year: year
+    });
+    switch (day) {
+      case 0:
+        this.setState({
+          day: "Sunday"
+        });
+        break;
+      case 1:
+        this.setState({
+          day: "Monday"
+        });
+        break;
+      case 2:
+        this.setState({
+          day: "Tuesday"
+        });
+        break;
+      case 3:
+        this.setState({
+          day: "Wednesday"
+        });
+        break;
+      case 4:
+        this.setState({
+          day: "Thursday"
+        });
+        break;
+      case 5:
+        this.setState({
+          day: "Friday"
+        });
+        break;
+      case 6:
+        this.setState({
+          day: "Saturday"
+        });
+        break;
+    }
   }
   render() {
     const { progress, loading } = this.props.progress;
@@ -27,7 +87,10 @@ class Progress extends Component {
         progressContent = (
           <div>
             <div className="progress-date">
-              <p>thursday 11.09.18</p>
+              <p>
+                {this.state.day} {this.state.date}.{this.state.month}.
+                {this.state.year}
+              </p>
             </div>
             <div className="progress-spacing">
               <div className="title">calories consumed</div>
@@ -85,11 +148,14 @@ class Progress extends Component {
         progressContent = (
           <div>
             <div className="progress-date">
-              <p>thursday 11.09.18</p>
+              <p>
+                {this.state.day} {this.state.date}.{this.state.month}.
+                {this.state.year}
+              </p>
             </div>
             <div className="no-data-line">
               <p>Goal has not been set</p>
-              <Link className="main-btn" to="/layout/editgoal">
+              <Link className="main-btn no-underline" to="/layout/editgoal">
                 set goal
               </Link>
             </div>

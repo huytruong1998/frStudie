@@ -66,29 +66,64 @@ class App extends Component {
           <div>
             <Route exact path="/" component={Login} />
             <Route exact path="/signup" component={SignUp} />
+            <div className="screen-max-width">
+              <div className="row">
+                <div className="col-lg-3 navbar-wrapper">
+                  <Route path="/layout" component={Layout} />
+                </div>
+                <div className="col-lg-9 content-wrapper">
+                  <Switch>
+                    <PrivateRoute
+                      path="/layout/progress"
+                      component={Progress}
+                    />
+                  </Switch>
+                  <Switch>
+                    <PrivateRoute
+                      path="/layout/guidance"
+                      component={Guidance}
+                    />
+                  </Switch>
+                  <Switch>
+                    <PrivateRoute path="/layout/consume" component={Consumed} />
+                  </Switch>
 
-            <div className="row">
-              <div className="col-lg-3 navbar-wrapper">
-                <Route path="/layout" component={Layout} />
-              </div>
-              <div className="col-lg-9 content-wrapper">
-                <Switch>
-                  <PrivateRoute path="/layout/progress" component={Progress} />
-                  <PrivateRoute path="/layout/guidance" component={Guidance} />
-                  <PrivateRoute path="/layout/consume" component={Consumed} />
-                  <PrivateRoute path="/layout/editgoal" component={EditGoal} />
-                  <PrivateRoute
-                    path="/layout/editprofile"
-                    component={EditProfile}
-                  />
-                  <PrivateRoute path="/layout/setting" component={Settings} />
-                  <PrivateRoute path="/layout/burnt" component={Burnt} />
-                  <PrivateRoute path="/layout/schedule" component={Schedule} />
-                  <PrivateRoute
-                    path="/layout/tracking"
-                    component={TrackingChoose}
-                  />
-                </Switch>
+                  <Switch>
+                    <PrivateRoute
+                      path="/layout/editgoal"
+                      component={EditGoal}
+                    />
+                  </Switch>
+
+                  <Switch>
+                    <PrivateRoute
+                      path="/layout/editprofile"
+                      component={EditProfile}
+                    />
+                  </Switch>
+
+                  <Switch>
+                    <PrivateRoute path="/layout/setting" component={Settings} />
+                  </Switch>
+
+                  <Switch>
+                    <PrivateRoute path="/layout/burnt" component={Burnt} />
+                  </Switch>
+
+                  <Switch>
+                    <PrivateRoute
+                      path="/layout/schedule"
+                      component={Schedule}
+                    />
+                  </Switch>
+
+                  <Switch>
+                    <PrivateRoute
+                      path="/layout/tracking"
+                      component={TrackingChoose}
+                    />
+                  </Switch>
+                </div>
               </div>
             </div>
           </div>

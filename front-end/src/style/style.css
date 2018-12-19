@@ -85,7 +85,7 @@
   background-color: #fe5196;
   border-style: none;
   border-radius: 9px;
-  width: 50%;
+  width: 35%;
   height: 6%;
 
   color: white;
@@ -219,13 +219,14 @@
   width: 97%;
   padding-left: 4vw;
 }
-.nav-item a {
+.nav-item p {
   font-family: "Open Sans";
   font-size: 27px;
   text-transform: uppercase;
   color: #fe5196 !important;
   letter-spacing: 4px;
   padding: 0 !important;
+  margin: 0;
 }
 .navbar-bullet {
   width: 11px;
@@ -237,11 +238,16 @@
   background-color: #fe5196;
   cursor: pointer;
 }
-.nav li:hover a {
+.nav li:hover p {
   color: white !important;
+  text-decoration: none;
+}
+/* Link no underline */
+.no-underline:hover {
+  text-decoration: none;
 }
 
-.nav-cate a:hover {
+.nav-cate p:hover {
   text-decoration: none;
 }
 
@@ -1026,14 +1032,14 @@
     margin-bottom: 25px;
   }
 
-  .nav-item a {
+  .nav-item p {
     color: white !important;
   }
   .nav li:hover {
     background-color: white;
     cursor: pointer;
   }
-  .nav li:hover a {
+  .nav li:hover p {
     color: #fe5196 !important;
   }
 }
