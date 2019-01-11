@@ -59,7 +59,7 @@ class Schedule extends Component {
             <li>1 cup steamed green beans</li>
             <li>
               1 baked medium red potato, drizzled with 1/2 Tbsp. olive oil and a
-              pinch each of salt and pepper.
+              pinch each of salt and pepper.2 dozen pound of oliver.
             </li>
           </ul>
         </div>
