@@ -12,6 +12,8 @@ router.get("/test", (req, res) => res.json({ msg: "Guide work" }));
 // @desc Add guide to database
 // @access Public
 
+router.get("/test2", (req, res) => res.json({ msg: "Guide test softagran" }));
+
 router.post("/add", (req, res) => {
   const { errors, isValid } = validateGuideInput(req.body);
 
