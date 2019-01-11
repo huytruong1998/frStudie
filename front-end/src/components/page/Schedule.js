@@ -31,7 +31,7 @@ class Schedule extends Component {
         <div className="food-schedule">
           <h3>Breakfast (271 calories)</h3>
           <ul>
-            <li>1 serving Avocado Egg Toast</li>
+            <li>1 serving Avocado Egg Toast(fancy meal)</li>
           </ul>
           <h3>A.M. Snack (63 calories)</h3>
           <ul>
@@ -39,7 +39,7 @@ class Schedule extends Component {
           </ul>
           <h3>Lunch (316 calories)</h3>
           <ul>
-            <li>Chickpea & cheese Salad</li>
+            <li>Chickpea & normal Salad</li>
             <li>2 cups mixed greens</li>
             <li>3/4 cup veggies of your choice (try cucumbers and tomatoes)</li>
             <li>2/3 cup chickpeas, rinsed</li>
@@ -49,11 +49,11 @@ class Schedule extends Component {
               tsp. olive oil and freshly ground pepper.
             </li>
           </ul>
-          <h3>P.M. Snack and cheese (66 calories)</h3>
+          <h3>P.M. Snack and cheese (70 calories)</h3>
           <ul>
             <li>1 extremely small orange</li>
           </ul>
-          <h3>Dinner (2000 calories)</h3>
+          <h3>Dinner (1000 calories)</h3>
           <ul>
             <li>1 serving Seared Salmon with Green Peppercorn Sauce</li>
             <li>1 cup steamed green beans</li>
