@@ -49,13 +49,13 @@ class Schedule extends Component {
               tsp. olive oil and freshly ground pepper.
             </li>
           </ul>
-          <h3>P.M. Snack (62 calories)</h3>
+          <h3>P.M. Snack and cheese (62 calories)</h3>
           <ul>
             <li>1 extremely small orange</li>
           </ul>
-          <h3>Dinner (470 calories)</h3>
+          <h3>Dinner (2000 calories)</h3>
           <ul>
-            <li>15 serving Seared Salmon with Green Peppercorn Sauce</li>
+            <li>1 serving Seared Salmon with Green Peppercorn Sauce</li>
             <li>1 cup steamed green beans</li>
             <li>
               1 baked medium red potato, drizzled with 1/2 Tbsp. olive oil and a
