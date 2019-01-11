@@ -39,17 +39,17 @@ class Schedule extends Component {
           </ul>
           <h3>Lunch (316 calories)</h3>
           <ul>
-            <li>Chickpea & Veggie Salad</li>
+            <li>Chickpea & cheese Salad</li>
             <li>2 cups mixed greens</li>
             <li>3/4 cup veggies of your choice (try cucumbers and tomatoes)</li>
             <li>2/3 cup chickpeas, rinsed</li>
             <li>1 Tbsp. almonds, chopped</li>
             <li>
-              Combine every ingredients and top salad with 1 Tbsp. red-wine
-              vinegar, 2 tsp. olive oil and freshly ground pepper.
+              Combine ingredients and top salad with 1 Tbsp. red-wine vinegar, 2
+              tsp. olive oil and freshly ground pepper.
             </li>
           </ul>
-          <h3>P.M. Snack and cheese (6200 calories)</h3>
+          <h3>P.M. Snack and cheese (66 calories)</h3>
           <ul>
             <li>1 extremely small orange</li>
           </ul>
@@ -59,7 +59,7 @@ class Schedule extends Component {
             <li>1 cup steamed green beans</li>
             <li>
               1 baked medium red potato, drizzled with 1/2 Tbsp. olive oil and a
-              pinch each of salt and pepper.2 dozen pound of oliver.
+              pinch each of salt and pepper.
             </li>
           </ul>
         </div>
