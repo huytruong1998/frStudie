@@ -31,7 +31,7 @@ class Schedule extends Component {
         <div className="food-schedule">
           <h3>Breakfast (271 calories)</h3>
           <ul>
-            <li>1 serving Avocado Egg Toast(fancy meal)</li>
+            <li>1 serving Avocado Egg Toast(not so good)</li>
           </ul>
           <h3>A.M. Snack (63 calories)</h3>
           <ul>
