@@ -45,11 +45,11 @@ class Schedule extends Component {
             <li>2/3 cup chickpeas, rinsed</li>
             <li>1 Tbsp. almonds, chopped</li>
             <li>
-              Combine ingredients and top salad with 1 Tbsp. red-wine vinegar, 2
-              tsp. olive oil and freshly ground pepper.
+              Combine every ingredients and top salad with 1 Tbsp. red-wine
+              vinegar, 2 tsp. olive oil and freshly ground pepper.
             </li>
           </ul>
-          <h3>P.M. Snack and cheese (62 calories)</h3>
+          <h3>P.M. Snack and cheese (6200 calories)</h3>
           <ul>
             <li>1 extremely small orange</li>
           </ul>
