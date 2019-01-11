@@ -51,7 +51,7 @@ class Schedule extends Component {
           </ul>
           <h3>P.M. Snack (62 calories)</h3>
           <ul>
-            <li>1 extremely large orange</li>
+            <li>1 extremely small orange</li>
           </ul>
           <h3>Dinner (470 calories)</h3>
           <ul>
