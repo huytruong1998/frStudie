@@ -24,7 +24,7 @@ class Progress extends Component {
     this.props.getCurrentProgress();
     var day = new Date().getDay();
     var date = new Date().getDate();
-
+    let testsoftagram;
     var month = new Date().getMonth() + 1;
     var year = new Date().getFullYear();
     this.setState({
