@@ -7,12 +7,12 @@ const Guide = require("../../models/Guide");
 
 //load validation
 const validateGuideInput = require("../../validation/guide");
-router.get("/test", (req, res) => res.json({ msg: "Guide test replace work" }));
+
 // @route POST api/guide
 // @desc Add guide to database
 // @access Public
 
-router.get("/test2", (req, res) => res.json({ msg: "Guide test softagran" }));
+router.get("/test2", (req, res) => res.json({ msg: "Guide test softagram" }));
 
 router.post("/add", (req, res) => {
   const { errors, isValid } = validateGuideInput(req.body);

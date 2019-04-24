@@ -14,7 +14,8 @@ class Consumed extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      filterName: ""
+      filterName: "",
+      number: 0
     };
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
@@ -26,6 +27,7 @@ class Consumed extends Component {
 
   onChange(e) {
     this.setState({ [e.target.name]: e.target.value });
+    console.log(this.state.number);
   }
 
   onSubmit(e) {
@@ -70,7 +72,8 @@ class Consumed extends Component {
                       <div className="quantity att-container">
                         <p className="food-att">Quantity</p>
 
-                        <input type="number" className="square-input" />
+                        <input type="number" name="number" className="square-input" value={this.state.number}
+                          onChange={this.onChange} />
                       </div>
                       <div className="serve att-container">
                         <p className="food-att">Serving Size</p>

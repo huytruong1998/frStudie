@@ -22,10 +22,7 @@ const db = require("./config/keys").mongoURI;
 
 //connect to mongodb
 mongoose
-  .connect(
-    db,
-    { useNewUrlParser: true }
-  )
+  .connect(db, { useNewUrlParser: true })
   .then(() => console.log("MongoDB Connected"))
   .catch(err => console.log(err));
 
@@ -38,7 +35,7 @@ app.use(passport.initialize());
 require("./config/passport")(passport);
 
 //routes
-app.use("/api/users", users);
+
 app.use("/api/profile", profile);
 app.use("/api/guide", guide);
 app.use("/api/goal", goal);
