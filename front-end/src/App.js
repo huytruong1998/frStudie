@@ -67,7 +67,7 @@ class App extends Component {
             <Route exact path="/" component={Login} />
             <Route exact path="/signup" component={SignUp} />
             <div className="screen-max-width">
-              {localStorage.jwtToken ? <div className="row">
+               <div className="row">
                 <div className="col-lg-3 navbar-wrapper">
                   <Route path="/layout" component={Layout} />
                 </div>
@@ -124,7 +124,7 @@ class App extends Component {
                     />
                   </Switch>
                 </div>
-              </div>:null}
+              </div>
 
               
 
