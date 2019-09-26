@@ -4,7 +4,7 @@ import Backdrop from "./Backdrop";
 import "../../../style/style.css";
 import logo from "../../../png-elements/logo.png";
 import propTypes from "prop-types";
-import { withRouter } from "react-router-dom";
+import { withRouter,Link } from "react-router-dom";
 import classnames from "classnames";
 import { connect } from "react-redux";
 import { registerUser } from "../../../actions/authActions";
@@ -130,6 +130,10 @@ class SignUp extends Component {
                 <button type="submit" className="authenticate-button" href="#">
                   sign up
                 </button>
+                <div className="sign-up-ask">
+                  <p>Alreadu have an account?</p>
+                  <Link to="/">Sign In</Link>
+                </div>
               </form>
             </div>
           </div>
