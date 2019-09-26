@@ -131,7 +131,7 @@ class SignUp extends Component {
                   sign up
                 </button>
                 <div className="sign-up-ask">
-                  <p>Alreadu have an account?</p>
+                  <p>Already have an account?</p>
                   <Link to="/">Sign In</Link>
                 </div>
               </form>
